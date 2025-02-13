@@ -6,11 +6,11 @@ export interface TaskProps {
   color: string;
 }
 
-export type TaskListType = {
+export interface TaskListType {
   taskList: TaskProps[];
   doneTasks: TaskProps[];
   notDoneTasks: TaskProps[];
   addTask: (task: TaskProps) => void;
   checkTask: (id: number) => void;
   deleteTask: (id: number) => void;
-};
+}

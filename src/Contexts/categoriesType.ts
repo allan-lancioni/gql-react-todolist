@@ -4,6 +4,6 @@ export interface CategorieProps {
   color: string;
 }
 
-export type CategorieContextType = {
+export interface CategorieContextType {
   categList: CategorieProps[];
-};
+}

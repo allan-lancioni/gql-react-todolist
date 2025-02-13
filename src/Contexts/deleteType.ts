@@ -1,8 +1,6 @@
-import React from "react";
-
-export type DeleteType = {
+export interface DeleteType {
   showDelete: boolean;
-  setShowDelete: Function;
+  setShowDelete: (showDelete: boolean) => void;
   id: number;
-  setId: Function;
-};
+  setId: (id: number) => void;
+}

@@ -1,8 +1,6 @@
-import React from "react";
-
-export type AddType = {
+export interface AddType {
   showAdd: boolean;
-  setShowAdd: Function;
+  setShowAdd: (showAdd: boolean) => void;
   id: number;
-  setId: Function;
-};
+  setId: (id: number) => void;
+}

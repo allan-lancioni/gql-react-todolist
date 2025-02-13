@@ -23,10 +23,7 @@ import AddModal from "../../Components/AddModal";
 import { AddContext } from "../../Contexts/addContext";
 import { AddType } from "../../Contexts/addType";
 import { Link } from "react-router-dom";
-import AuthContext, {
-  AuthType,
-  UserDataProps,
-} from "../../Contexts/authContext";
+import AuthContext, { AuthType } from "../../Contexts/authContext";
 
 const CategoriePage: React.FC = () => {
   const { name } = useParams<string>();
@@ -131,6 +128,7 @@ const CategoriePage: React.FC = () => {
             list={task.categorie}
             color={task.color}
             done={task.done}
+            key={task.id}
           />
         ))}
         <AddTask></AddTask>

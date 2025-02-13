@@ -1,8 +1,8 @@
-import React, { useState, useContext } from "react";
-import * as S from "./styles";
-import Logo from "../../Img/Logo.png";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import AuthContext, { AuthType } from "../../Contexts/authContext";
+import Logo from "../../Img/Logo.png";
+import * as S from "./styles";
 
 const Login: React.FC = () => {
   const { setUserData } = useContext(AuthContext) as AuthType;
@@ -47,7 +47,8 @@ const Login: React.FC = () => {
           <S.SignIn onClick={handleLogin}>Sign In</S.SignIn>
         </Link>
         <S.Subtitle>
-          Don't have an account? <a>Sign Up</a>
+          Don&apos;t have an account? 
+          <button>Sign Up</button>
         </S.Subtitle>
       </S.RightSide>
     </S.Page>

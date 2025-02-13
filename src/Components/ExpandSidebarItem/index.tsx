@@ -1,10 +1,10 @@
-import React, { useState, useContext } from "react";
-import * as S from "./styles";
-import Arrow from "../../Img/arrow.svg";
-import CategorieItem from "../Categorie";
-import Add from "../../Img/add.svg";
+import React, { useContext, useState } from "react";
 import { CategoriesContext } from "../../Contexts/categoriesContext";
 import { CategorieContextType } from "../../Contexts/categoriesType";
+import Add from "../../Img/add.svg";
+import Arrow from "../../Img/arrow.svg";
+import CategorieItem from "../Categorie";
+import * as S from "./styles";
 
 interface SidebarItemProps {
   name: string;
@@ -28,7 +28,7 @@ const ExpandSidebarItem: React.FC<SidebarItemProps> = ({ name, icon }) => {
       </S.Container>
       <S.CatArea isActive={active}>
         {categList.map((cat) => (
-          <CategorieItem name={cat.name} color={cat.color} />
+          <CategorieItem name={cat.name} color={cat.color} key={cat.id}/>
         ))}
         <S.AddArea>
           <S.AddIcon src={Add} />

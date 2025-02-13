@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { css } from "styled-components";
 
@@ -21,7 +20,7 @@ export const OuterContainer = styled.div<ContainerProps>`
     color:#777;
     font-weight:100;
     margin: 4px 0;
-    
+
     border-radius:8px;
 
     ${(props) =>

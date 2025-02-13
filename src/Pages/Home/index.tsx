@@ -20,10 +20,7 @@ import AddModal from "../../Components/AddModal";
 import { AddContext } from "../../Contexts/addContext";
 import { AddType } from "../../Contexts/addType";
 import { Link } from "react-router-dom";
-import AuthContext, {
-  AuthType,
-  UserDataProps,
-} from "../../Contexts/authContext";
+import AuthContext, { AuthType } from "../../Contexts/authContext";
 
 const Home: React.FC = () => {
   const { taskList, doneTasks, notDoneTasks } = useContext(
@@ -116,6 +113,7 @@ const Home: React.FC = () => {
         {listOfLists[listToDisplay].map((task) => (
           <TaskCard
             id={task.id}
+            key={task.id}
             name={task.title}
             list={task.categorie}
             color={task.color}

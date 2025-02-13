@@ -6,8 +6,6 @@ import { TaskListContext } from "../../Contexts/taskListContext";
 import { TaskProps, TaskListType } from "../../Contexts/taskType";
 import { CategoriesContext } from "../../Contexts/categoriesContext";
 import { CategorieContextType } from "../../Contexts/categoriesType";
-import { ActionMeta, InputActionMeta } from "react-select";
-import Select from "react-select/dist/declarations/src/Select";
 
 const AddModal: React.FC = () => {
   const { addTask } = useContext(TaskListContext) as TaskListType;
@@ -16,7 +14,7 @@ const AddModal: React.FC = () => {
 
   const [taskName, setTaskName] = useState("");
   const [taskCat, setTaskCat] = useState(
-    categList.findIndex((cat) => cat.name == "None"),
+    categList.findIndex((cat) => cat.name === "None"),
   );
 
   function handleTyping(event: React.ChangeEvent<HTMLInputElement>) {
@@ -41,7 +39,7 @@ const AddModal: React.FC = () => {
     addTask(newTask);
   }
 
-  var e = document.getElementById("select") as HTMLSelectElement;
+  const e = document.getElementById("select") as HTMLSelectElement;
 
   function handleChange() {
     setTaskCat(Number(e.options[e.selectedIndex].value));
@@ -59,7 +57,7 @@ const AddModal: React.FC = () => {
         <S.Text>Select a categorie</S.Text>
         <S.Select id="select" onChange={handleChange}>
           {categList.map((cat) => (
-            <option value={cat.id}>{cat.name}</option>
+            <option key={cat.id} value={cat.id}>{cat.name}</option>
           ))}
         </S.Select>
         <S.Buttons>

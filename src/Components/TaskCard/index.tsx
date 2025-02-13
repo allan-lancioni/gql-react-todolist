@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import * as S from "./styles";
 import Edit from "../../Img/edit.svg";
 import Erase from "../../Img/erase.svg";

@@ -1,14 +1,14 @@
-import React, { useState, createContext } from "react";
+import React, { createContext, useState } from "react";
 import { ChildrenProps } from "./deleteContext";
 
 export interface UserDataProps {
   email: string;
 }
 
-export type AuthType = {
+export interface AuthType {
   userData: UserDataProps;
-  setUserData: Function;
-};
+  setUserData: (useData: UserDataProps) => void;
+}
 
 const AuthContext = createContext<AuthType | null>(null);
 

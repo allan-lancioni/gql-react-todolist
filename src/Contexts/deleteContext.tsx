@@ -1,4 +1,4 @@
-import React, { useState, createContext, ReactNode } from "react";
+import React, { createContext, useState } from "react";
 import { DeleteType } from "./deleteType";
 
 export interface ChildrenProps {

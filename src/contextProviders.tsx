@@ -1,10 +1,10 @@
 import React from "react";
-import { DeleteContextProvider } from "./Contexts/deleteContext";
-import { TaskListContextProvider } from "./Contexts/taskListContext";
-import { ChildrenProps } from "./Contexts/deleteContext";
-import { CategoriesContextProvider } from "./Contexts/categoriesContext";
 import { AddContextProvider } from "./Contexts/addContext";
 import { AuthProvider } from "./Contexts/authContext";
+import { CategoriesContextProvider } from "./Contexts/categoriesContext";
+import { DeleteContextProvider } from "./Contexts/deleteContext";
+import { ChildrenProps } from "./Contexts/deleteContext";
+import { TaskListContextProvider } from "./Contexts/taskListContext";
 
 const ContextProviders: React.FC<ChildrenProps> = ({ children }) => {
   return (

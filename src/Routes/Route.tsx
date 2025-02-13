@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import { Routes, Route, Link, Navigate } from "react-router-dom";
-import { ChildrenProps } from "../Contexts/deleteContext";
+import { Navigate } from "react-router-dom";
 
 import AuthContext, { AuthType } from "../Contexts/authContext";
 
