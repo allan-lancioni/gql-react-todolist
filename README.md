@@ -1,40 +1,71 @@
-# ReactJS-ToDoList
+# ReactJS-ToDoList (Forked & Extended)
 
 ## Introduction
 
-This project implements the Front-End for a simple To-Do List web application, using the React JS library, and also Styled Components replacing pure CSS.<br/>
-It includes the login page and the general UI of the app. <br/>
-The login authentication logic and the tasks database for each user are not implemented, since this project aims to be a Front-End study only.
+This project is a **forked and extended** version of a Front-End To-Do List web application, originally created by [Matheus Cavini](https://github.com/MatheusCavini). 
 
-## Demonstration
+I am integrating this front-end with my own **NestJS + GraphQL + PostgreSQL backend**, adding authentication and persistent task management.
 
-https://user-images.githubusercontent.com/122649188/214991561-d29b14eb-560a-4ba4-aa12-0656278d3fc8.mp4
+The original project was a **Front-End study only**, without authentication or a database. My goal is to **extend it into a full-stack application** while keeping the clean UI design intact.
 
-## Inspiration
+## Original Repository
 
-The login page was inspired in [this design](https://dribbble.com/shots/17564792-Log-in-page-Untitled-UI/attachments/12710737?mode=media) by Jordan Hughes.
-The home page was inspired in [this design](https://dribbble.com/shots/14440819-KosmoTime-Task-Manager/attachments/6121947?mode=media) by Mik Skuza.
+The original version of this project can be found at:  
+🔗 [Original Repo](https://github.com/MatheusCavini/ReactJS-ToDoList)
 
-## Features
+## Features (Updated)
 
-• Login page, including Sign In button, which redirects to the main application; <br/>
-• Application UI with navigation sidebar and area for the to-do list; <br/>
-• Add new task, setting name and categorie properties; <br/>
-• Delete task, with a modal for confirming the action; <br/>
-• Check task as done via checkbox; <br/>
-• Filter tasks showing in the to-do list by "done", "not done" or "all"; <br/>
-• Filter tasks showing in the to-do list by their categorie, via selecting on the sidebar; <br/>
-• Authorization: user cannot access home page before login, neither login page after logged. <br/>
+✅ **Full-Stack Integration:** Connected to a NestJS GraphQL backend with PostgreSQL.  
+✅ **Authentication:** Users can sign up, log in, and manage their tasks securely.  
+✅ **Persistent Task Storage:** Tasks are stored in a PostgreSQL database instead of temporary local state.  
+✅ **Existing Frontend Features:**  
+- Login page with authentication.  
+- To-Do list UI with sidebar navigation.  
+- Task creation, completion, deletion, and filtering.  
 
-Obs.: currently, the "edit task" and adding or removing categories functionalities are not implemented, since I considered it wouldn't contribute that much to my personal learning, and would be very time consuming. Maybe I'll implement this later on.
+## Installation & Usage
 
-## Usage
+### **Frontend**
+1. Install [Node.js](https://nodejs.org/en/), [Yarn](https://classic.yarnpkg.com/lang/en/), and [Git](https://git-scm.com/downloads).  
+2. Clone this repository:
+   ```sh
+   git clone https://github.com/your-username/ReactJS-ToDoList.git
+   cd ReactJS-ToDoList
+   ```
+3. Install dependencies:
+   ```sh
+   yarn install
+   ```
+4. Start the frontend:
+   ```sh
+   yarn start
+   ```
 
-If you want to try this project yourself:
+### **Backend** (Separate Repository)
+1. Clone the backend repository:
+   ```sh
+   git clone https://github.com/your-username/backend-repo.git
+   cd backend-repo
+   ```
+2. Run the backend with Docker:
+   ```sh
+   docker-compose up --build
+   ```
 
-1. Install Node on your machine, via https://nodejs.org/en/.
-2. Install Yarn on your machine via terminal command: `sudo npm install -g yarn`
-3. Install Git on your machine, via https://git-scm.com/downloads.
-4. Clone this repository to your machine. (more on how to do this [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository))
-5. Run `yarn install` on the terminal, inside the folder where you downloaded the project, to install all used dependencies.
-6. Run `yarn start` to run the project on your browser.
+## Keeping Your Fork Updated
+To fetch updates from the original repository and keep your fork in sync:
+```sh
+git fetch upstream
+git merge upstream/main
+git push origin main
+```
+
+## Acknowledgments
+
+- **Original Frontend Author:** [Matheus Cavini](https://github.com/MatheusCavini)  
+- **UI Inspiration:**  
+  - [Login Page by Jordan Hughes](https://dribbble.com/shots/17564792-Log-in-page-Untitled-UI/attachments/12710737?mode=media)  
+  - [Home Page by Mik Skuza](https://dribbble.com/shots/14440819-KosmoTime-Task-Manager/attachments/6121947?mode=media)  
+
+---
+
